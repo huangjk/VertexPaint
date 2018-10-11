@@ -433,7 +433,7 @@ namespace JBooth.VertexPainterPro
          MeshRenderer mr = GetComponent<MeshRenderer>();
          MeshFilter mf = GetComponent<MeshFilter>();
 
-         if (mr != null && mf != null && mf.sharedMesh != null)
+         if (mr != null && mf != null && mf.sharedMesh != null && mf.sharedMesh.isReadable)
          {
             int vertexCount = mf.sharedMesh.vertexCount;
             Mesh stream = meshStream;
